@@ -1,5 +1,5 @@
-.grid {
-  display: flex-center;
+.flexbox-container {
+  display: flex;
   flex-wrap: wrap;
   width: 400px;
   height: 300px;
