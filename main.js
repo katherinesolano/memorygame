@@ -33,10 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "squidgame-8",
       img: "images/squidgame-8.png",
     },
-    // {
-    //   name: "squidgame-9",
-    //   img: "images/squidgame-9.png",
-    // },
     {
       name: "squidgame-1",
       img: "images/squidgame-1.png",
@@ -69,10 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "squidgame-8",
       img: "images/squidgame-8.png",
     },
-    // {
-    //   name: "squidgame-9",
-    //   img: "images/squidgame-9.png",
-    // },
   ];
 
   cardArray.sort(() => 0.5 - Math.random());
@@ -82,6 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let cardsChosen = [];
   let cardsChosenId = [];
   let cardsWon = [];
+
+  //music
+  var audio = new Audio("music/bg.mp3");
+  audio.play();
+
+  //popup
+  function togglePopup() {
+    document.getElementById("popup").classList.toggle("active");
+  }
 
   //create your board
   function createBoard() {
@@ -121,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cardsChosenId = [];
     resultDisplay.textContent = cardsWon.length;
     if (cardsWon.length === cardArray.length / 2) {
-      resultDisplay.textContent = " Congratulations! You found them all!";
+      resultDisplay.textContent = " Congratulations! You finished the game!";
     }
   }
 
