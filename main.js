@@ -2,53 +2,77 @@ document.addEventListener("DOMContentLoaded", () => {
   //card options
   const cardArray = [
     {
-      name: "fries",
-      img: "images/fries.png",
+      name: "squidgame-1",
+      img: "images/squidgame-1.png",
     },
     {
-      name: "cheeseburger",
-      img: "images/cheeseburger.png",
+      name: "squidgame-2",
+      img: "images/squidgame-2.png",
     },
     {
-      name: "ice-cream",
-      img: "images/ice-cream.png",
+      name: "squidgame-3",
+      img: "images/squidgame-3.png",
     },
     {
-      name: "pizza",
-      img: "images/pizza.png",
+      name: "squidgame-4",
+      img: "images/squidgame-4.png",
     },
     {
-      name: "milkshake",
-      img: "images/milkshake.png",
+      name: "squidgame-5",
+      img: "images/squidgame-5.png",
     },
     {
-      name: "hotdog",
-      img: "images/hotdog.png",
+      name: "squidgame-6",
+      img: "images/squidgame-6.png",
     },
     {
-      name: "fries",
-      img: "images/fries.png",
+      name: "squidgame-7",
+      img: "images/squidgame-7.png",
     },
     {
-      name: "cheeseburger",
-      img: "images/cheeseburger.png",
+      name: "squidgame-8",
+      img: "images/squidgame-8.png",
+    },
+    // {
+    //   name: "squidgame-9",
+    //   img: "images/squidgame-9.png",
+    // },
+    {
+      name: "squidgame-1",
+      img: "images/squidgame-1.png",
     },
     {
-      name: "ice-cream",
-      img: "images/ice-cream.png",
+      name: "squidgame-2",
+      img: "images/squidgame-2.png",
     },
     {
-      name: "pizza",
-      img: "images/pizza.png",
+      name: "squidgame-3",
+      img: "images/squidgame-3.png",
     },
     {
-      name: "milkshake",
-      img: "images/milkshake.png",
+      name: "squidgame-4",
+      img: "images/squidgame-4.png",
     },
     {
-      name: "hotdog",
-      img: "images/hotdog.png",
+      name: "squidgame-5",
+      img: "images/squidgame-5.png",
     },
+    {
+      name: "squidgame-6",
+      img: "images/squidgame-6.png",
+    },
+    {
+      name: "squidgame-7",
+      img: "images/squidgame-7.png",
+    },
+    {
+      name: "squidgame-8",
+      img: "images/squidgame-8.png",
+    },
+    // {
+    //   name: "squidgame-9",
+    //   img: "images/squidgame-9.png",
+    // },
   ];
 
   cardArray.sort(() => 0.5 - Math.random());
@@ -65,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("img");
       card.setAttribute("src", "images/blank.png");
       card.setAttribute("data-id", i);
+      card.classList.add("imageCard");
       card.addEventListener("click", flipCard);
       grid.appendChild(card);
     }
@@ -96,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cardsChosenId = [];
     resultDisplay.textContent = cardsWon.length;
     if (cardsWon.length === cardArray.length / 2) {
-      resultDisplay.textContent = "Congratulations! You found them all!";
+      resultDisplay.textContent = " Congratulations! You found them all!";
     }
   }
 

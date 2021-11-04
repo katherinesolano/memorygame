@@ -1,6 +1,17 @@
-.flexbox-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 400px;
-  height: 300px;
+body {
+  background-color: deeppink;
+}
+
+.imageCard {
+  margin-right: 4px;
+  height: 150px;
+  width: 150px;
+  /* border: green 2px solid; */
+}
+
+.grid {
+  margin: 0 auto;
+  width: 620px; /* image width x number of images per row */
+  height: auto;
+  /* border: solid blue 1px; */
 }
