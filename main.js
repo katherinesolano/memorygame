@@ -80,9 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
   audio.play();
 
   //popup
-  function togglePopup() {
-    document.getElementById("popup").classList.toggle("active");
-  }
+  let startbtn = document.getElementById("start-btn");
+  startbtn.addEventListener("click", () => {
+    let btn = document.getElementById("content");
+    console.log(btn);
+    btn.style.visibility = "hidden";
+  });
 
   //create your board
   function createBoard() {
